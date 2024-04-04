@@ -5,9 +5,9 @@
 To use, either specify the file path or provide a dictionary for the method call as an argument in main.py.
 
 # Tests
-For testing, run the following command in the project directory.
+For testing, run the following command in the project root directory.
 ```
-pytest ./testVerifier.py
+pytest ./tests/testVerifier.py
 ```
 
 # Run locally

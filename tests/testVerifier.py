@@ -34,10 +34,10 @@ def test_verify_resource_false(base_policy_data):
     assert verify_aws_policy(base_policy_data) == False
 
 def test_verify_resource_true_file():
-    assert verify_aws_policy("testTrue.json") == True # file contains a resource not equal to "*", should return True
+    assert verify_aws_policy("tests/testTrue.json") == True # file contains a resource not equal to "*", should return True
 
 def test_verify_resource_false_file():
-    assert verify_aws_policy("testFalse.json") == False # file contains a resource equal to "*", should return False
+    assert verify_aws_policy("tests/testFalse.json") == False # file contains a resource equal to "*", should return False
 
 def test_verify_resource_missing_file():
     with pytest.raises(FileNotFoundError):
@@ -45,4 +45,4 @@ def test_verify_resource_missing_file():
 
 def test_verify_wrong_format():
     with pytest.raises(KeyError):
-        verify_aws_policy("testWrongFormat.json") # file contains wrong json format, should raise KeyError
+        verify_aws_policy("tests/testWrongFormat.json") # file contains wrong json format, should raise KeyError
